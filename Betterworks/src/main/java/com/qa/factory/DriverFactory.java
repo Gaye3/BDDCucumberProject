@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class DriverFactory {
 
     public WebDriver driver;
-    public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
+    public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 
     /**
      * This method is used to initialize the threadlocal driver on the basis of given browser

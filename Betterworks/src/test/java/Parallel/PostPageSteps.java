@@ -12,7 +12,7 @@ import org.junit.Assert;
 import java.util.List;
 import java.util.Map;
 
-public class PostPageSteps {
+public class PostPageSteps{
 
     private static String title;
     private PostPage postPage;
@@ -26,7 +26,6 @@ public class PostPageSteps {
         String password = creadList.get(0).get("password");
         DriverFactory.getDriver().get("https://engage-web.betterworks.com/signin");
         postPage = loginPage.doLogin(userName,password);
-
     }
 
     @Given("user is on Create Post Page")
@@ -48,7 +47,7 @@ public class PostPageSteps {
 
     }
     @When("user clicks on CREATE NEW POST BUTTON")
-    public void user_clicks_on_create_new_post_button() {
+    public void user_clicks_on_create_new_post_button() throws InterruptedException {
         postPage.clickOnCreatePostBtn();
 
     }
